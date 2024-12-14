@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-image: url('assets/snow.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.spotify-container {
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.spotify-header {
+  background-color: #121212;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.spotify-main {
+  padding: 20px;
+  background: #1db954;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.song-info img {
+  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+#song-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#artist-name {
+  font-size: 1.2rem;
+  color: #151411;
+}
+
+
+.details h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.control-btn {
+  background-color: #fff;
+  color: #121212;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: ll 0.3as ease-in-out;
+}
+.control-btn:hover {
+  background-color: #fff;
+  transform: scale(1.1);
+}
+.control-btn:focus {
+  outline: 3px solid #f39c12;
+}
+
+
+.volume-progress {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  gap: 10px; 
+}
+
+input[type="range"] {
+  width: 70%;
+}
+
+/* Progress Bar Styling */
+#progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: width 0.2s;
+}
+
+.lyrics {
+  background-color: #fff;
+  color: #121212;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+#lyrics-box {
+  height: 150px;
+  overflow-y: auto;
+  margin-top: 10px;
+  line-height: 1.5;
+  scrollbar-width: thin;
+  scrollbar-color: #1db954 #fff;
+  transition: all 0.5s ease;
+}
+
+
+#audio-player {
+  display: none;
+}
+@media (max-width: 768px) {
+  .control-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  input[type="range"] {
+    width: 90%;
+  }
+
+  .lyrics {
+    font-size: 0.9rem;
+  }
+}
